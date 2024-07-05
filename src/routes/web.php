@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ReseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/', [ReseController::class, 'shop']);
+Route::get('/thanks', [ReseController::class, 'thanks']);
+Route::get('/done', [ReseController::class, 'done']);
+Route::get('/register', [ReseController::class, 'register']);
+Route::get('/login', [ReseController::class, 'login']);
